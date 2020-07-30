@@ -21,7 +21,7 @@ if st.checkbox('Show/Hide History'):
             ''')
 
 # A plot of the Age Distribution affected by covid
-age_df = pd.read_csv('covid_data\AgeGroupDetails.csv')
+age_df = pd.read_csv('AgeGroupDetails.csv')
 age_plt = plt.bar(age_df['AgeGroup'][0:8], (age_df['TotalCases'][0:8] /
                                             age_df['TotalCases'].sum()), width=0.75, color=['#9e9e9e', '#43ba76', '#1f72b2', '#815c3b',  '#b74cd4'])
 plt.xlabel('Age Groups')
@@ -35,7 +35,7 @@ st.write('''As We can see from the graph above the most people who are affected 
           ''')
 
 # State wise Testing details
-state_test_df = pd.read_csv('covid_data\StatewiseTestingDetails.csv')
+state_test_df = pd.read_csv('StatewiseTestingDetails.csv')
 states = (state_test_df.State.unique()).tolist()
 st.write('# Data Analysis')
 
@@ -85,7 +85,7 @@ st.pyplot()
 
 
 # Hospital Bed Data for each state
-hospital_df = pd.read_csv('covid_data\HospitalBedsIndia.csv')
+hospital_df = pd.read_csv('HospitalBedsIndia.csv')
 
 st.header('** Hospital Bed Data **')
 
